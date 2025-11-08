@@ -1,7 +1,7 @@
 ## sliding window implementation
 
 
-
+## finding subarry
 
 
 def maxsum_subarray(arr,k):
@@ -21,7 +21,7 @@ def maxsum_subarray(arr,k):
     # then minus the first elenment arr[i-k] = 3-3 = arr[0]
         window_sum += arr[i] - arr[i - k]
     # we are finding the max sub arr
-    # comparing it our prev windows and returning that
+    # comparing it our prev window and returning that
         max_sum = max(window_sum, max_sum)
 
     return max_sum
