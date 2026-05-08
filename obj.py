@@ -102,6 +102,9 @@ class Computer:
     def setPrice(self, price):
         self.__price = price
 
+    def getPrice(self):
+        return f"get price {self.__price}"
+
     def __str__(self):
         return f"price:{self.__price}"
 
@@ -114,6 +117,9 @@ cmp1.setPrice(900)
 
 print(cmp1)
 
-del cmp1
+# del cmp1
 
 print(cmp1)
+
+
+cmp1.getPrice()
