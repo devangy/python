@@ -14,11 +14,11 @@ def stock_sd(prices):
     # buy day will be 0 and sell will  
     for left in range(n):
         # expand right window based on condition
-        right = left + 1
+        right = left + 1 # sell day is after buy day
         while right < n:
             temp_profit = prices[right] - prices[left]
             max_profit = max(temp_profit,max_profit)
-            right+= 1
+            right+= 1  # keep expanding window by 1
     return max_profit
 
 
@@ -26,3 +26,4 @@ def stock_sd(prices):
 prices = [10,1,5,6,7,1]
 
 print(stock_sd(prices))
+
