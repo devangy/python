@@ -32,3 +32,34 @@ def encode(strs: List[str]) -> str:
     return ''.join(res) # return res array with no space between them
 
 
+def decode(str: str):
+
+    sizes = []
+    for char in str:
+        if char == ",":
+            continue
+        if char == "#":
+            break
+        sizes.append(int(char))
+
+
+    strings = []
+
+    i = str.index("#") + 1
+    
+    for sz in sizes:
+        word = str[i : i + sz]
+        strings.append(word)
+        i += sz
+    return strings
+    
+
+
+
+
+
+
+
+
+encoded_str = encode(strs)
+print(decode(encoded_str))
